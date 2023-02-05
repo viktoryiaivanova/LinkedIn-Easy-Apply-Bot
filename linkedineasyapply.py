@@ -121,11 +121,11 @@ class LinkedinEasyApply:
             raise Exception("No more jobs on this page")
 
         try:
-            job_results = self.browser.find_element_by_class_name("jobs-search-results")
+            job_results = self.browser.find_element_by_class_name("jobs-search-results-list")
             self.scroll_slow(job_results)
             self.scroll_slow(job_results, step=300, reverse=True)
 
-            job_list = self.browser.find_elements_by_class_name('jobs-search-results__list')[0].find_elements_by_class_name('jobs-search-results__list-item')
+            job_list = self.browser.find_elements_by_class_name('jobs-search-results-list')[0].find_elements_by_class_name('jobs-search-results__list-item')
         except:
             raise Exception("No more jobs on this page")
 
@@ -307,7 +307,7 @@ class LinkedinEasyApply:
             for el in frm_el:
                 # Radio check
                 try:
-                    radios = el.find_element_by_class_name('jobs-easy-apply-form-element').find_elements_by_class_name('fb-radio')
+                    radios = el.find_element_by_class_name('jobs-easy-apply-form-element').find_elements_by_class_name('fb-text-selectable__option')
 
                     radio_text = el.text.lower()
                     radio_options = [text.text.lower() for text in radios]
@@ -347,6 +347,16 @@ class LinkedinEasyApply:
                                 break
                     elif 'data retention' in radio_text:
                         answer = 'no'
+                    elif 'are you willing to take a drug test, in accordance with local law/regulations?' in radio_text:
+                        answer = 'yes'
+                    elif 'do you hold a secret clearance' in radio_text:
+                        answer = 'no'
+                    elif 'are you comfortable in a remote setting' in radio_text:
+                        answer = 'yes'
+                    elif 'are you a us citizen or permanent resident' in radio_text:
+                        answer = 'yes'
+                    elif 'are you located in the us' in radio_text:
+                        answer = 'yes'
                     else:
                         answer = radio_options[len(radio_options) - 1]
 
@@ -369,11 +379,11 @@ class LinkedinEasyApply:
                 # Questions check
                 try:
                     question = el.find_element_by_class_name('jobs-easy-apply-form-element')
-                    question_text = question.find_element_by_class_name('fb-form-element-label').text.lower()
+                    question_text = question.find_element_by_xpath('.//label').text.lower()
 
                     txt_field_visible = False
                     try:
-                        txt_field = question.find_element_by_class_name('fb-single-line-text__input')
+                        txt_field = question.find_element_by_class_name('artdeco-text-input--input')
 
                         txt_field_visible = True
                     except:
@@ -387,10 +397,10 @@ class LinkedinEasyApply:
                     if txt_field_visible != True:
                         txt_field = question.find_element_by_class_name('multi-line-text__input')
 
-                    text_field_type = txt_field.get_attribute('name').lower()
+                    text_field_type = txt_field.get_attribute('aria-describedby').lower()
                     if 'numeric' in text_field_type:
                         text_field_type = 'numeric'
-                    elif 'text' in text_field_type:
+                    else:
                         text_field_type = 'text'
 
                     to_enter = ''
@@ -403,7 +413,7 @@ class LinkedinEasyApply:
                                 break
 
                         to_enter = no_of_years
-                    elif 'many years of work experience do you have using' in question_text:
+                    elif 'many years of work experience do you have' in question_text:
                         no_of_years = self.technology_default
 
                         for technology in self.technology:
@@ -454,17 +464,17 @@ class LinkedinEasyApply:
                     pass
                 # Dropdown check
                 try:
-                    question = el.find_element_by_class_name('jobs-easy-apply-form-element')
-                    question_text = question.find_element_by_class_name('fb-form-element-label').text.lower()
+                    question = el.find_element_by_xpath(".//*[contains(@class, 'jobs-easy-apply-form-element')]")
+                    question_text = question.find_element_by_xpath('.//label').text.lower()
 
-                    dropdown_field = question.find_element_by_class_name('fb-dropdown__select')
+                    dropdown_field = question.find_element_by_xpath(".//select")
 
                     select = Select(dropdown_field)
 
                     options = [options.text for options in select.options]
 
                     if 'proficiency' in question_text:
-                        proficiency = "Conversational"
+                        proficiency = "Professional"
 
                         for language in self.languages:
                             if language.lower() in question_text:
@@ -545,6 +555,24 @@ class LinkedinEasyApply:
                             choice = options[len(options) - 1]
 
                         self.select_dropdown(dropdown_field, choice)
+                    elif 'do you require c2c' in question_text:
+                        answer = 'no'
+
+                        choice = ""
+
+                        for option in options:
+                            if answer == 'yes':
+                                # find some common words
+                                choice = option
+                            else:
+                                if 'no' in option.lower():
+                                    choice = option
+
+                        if choice == "":
+                            choice = options[len(options) - 1]
+
+                        self.select_dropdown(dropdown_field, choice)
+                    
                     else:
                         choice = ""
 
@@ -729,4 +757,3 @@ class LinkedinEasyApply:
                          "&keywords=" + position + location + "&start=" + str(job_page*25))
 
         self.avoid_lock()
-
