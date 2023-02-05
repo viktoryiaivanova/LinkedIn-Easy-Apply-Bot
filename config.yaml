@@ -1,21 +1,21 @@
-email: email@domain.com
-password: yourpassword
+email: fake@gmail.com
+password: pwd
 
 disableAntiLock: False
 
-remote: False
+remote: True
 
 experienceLevel:
  internship: False
  entry: True
- associate: False
- mid-senior level: False
- director: False
- executive: False
+ associate: True
+ mid-senior level: True
+ director: True
+ executive: True
  
 jobTypes:
  full-time: True
- contract: False
+ contract: True
  part-time: False
  temporary: False
  internship: False
@@ -29,18 +29,50 @@ date:
  24 hours: False
  
 positions:
- #- First position
- #- A second position
- #- A third position
- #- ...
+ - QA Engineer
+ - Quality Assurance  Engineer
+#  - Software Test Engineer
+#  - Test Automation Engineer
+#  - Software Engineer in Test
 locations:
- #- First location
- #- A second location
- #- A third location
- #- ...
-distance: 25
+- United States
+# - Las Vegas Metropolitan Area
+# - Austin, Texas Metropolitan Area
+# - Dallas-Fort Worth Metroplex
+# - Greater Anchorage Area
+# - New York City Metropolitan Area
+# - San Francisco Bay Area
+# - Los Angeles Metropolitan Area
+# - Honolulu Metropolitan Area
+# - Greater Chicago Area
+# - San Diego Metropolitan Area
+# - Greater Seattle Area
+# - Denver Metropolitan Area
+# - Salt Lake City Metropolitan Area
+# - Greater Minneapolis-St. Paul Area
+# - Greater St. Louis
+# - Greater Phoenix Area
+# - Albuquerque-Santa Fe Metropolitan Area
+# - Greater Houston
+# - Oklahoma City Metropolitan Area
+# - Kansas City Metropolitan Area
+# - Greater New Orleans Region
+# - Nashville Metropolitan Area
+# - Greater Indianapolis
+# - Columbus, Ohio Metropolitan Area
+# - Detroit Metropolitan Area
+# - Greater Pittsburgh Region
+# - Greater Pittsburgh Region
+# - Miami-Fort Lauderdale Area
+# - Greater Tampa Bay Area
+# - Greater Orlando
+# - Jacksonville, Florida, United States
+# - Greater Philadelphia
+# - Greater Hartford
+# - Greater Boston
+distance: 100
 
-outputFileDirectory: C:\Users\myDirectory\
+outputFileDirectory: ./
 
 companyBlacklist:
  #- company
@@ -51,7 +83,7 @@ titleBlacklist:
  #- word2
 
 uploads:
- resume: C:\Users\myDirectory\Resume.pdf
+ resume: ./resume.pdf
  # Cover letter is optional
  #coverLetter: C:\Users\myDirectory\CoverLettter.pdf
 
@@ -89,7 +121,7 @@ universityGpa: 4.0
 
 # ------------ Additional parameters: languages ---------------
 languages:
- english: Native or bilingual # None, Conversational, Professional, Native or bilingual
+ english: Professional # None, Conversational, Professional, Native or bilingual
 
 
 # ------------ Additional parameters: years of INDUSTRY experience ---------------
@@ -106,12 +138,12 @@ industry:
  Customer Service: 0
  Distribution Design: 0
  Education: 0
- Engineering: 0
+ Engineering: 6
  Finance: 0
  General Business: 0
  Health Care Provider: 0
  Human Resources: 0
- Information Technology: 0
+ Information Technology: 6
  Legal: 0
  Management: 0
  Manufacturing: 0
@@ -121,7 +153,7 @@ industry:
  Product Management: 0
  Project Management: 0
  Production: 0
- Quality Assurance: 0
+ Quality Assurance: 6
  Research: 0
  Sales: 0
  Science: 0
@@ -134,7 +166,7 @@ industry:
  #C++: 0
  #Python: 1
  # default to put for any skill that you did not list
- default: 0
+ default: 6
  # end custom ones
 
 
@@ -144,19 +176,19 @@ technology:
  #python: 0
  #selenium: 0
  # default to put for any skill that you did not list
- default: 0
+ default: 6
 # ------------ Additional parameters: personal info ---------------
 personalInfo:
- First Name: FirstName
- Last Name: LastName
- Phone Country Code: Canada (+1) # See linkedin for your country code, must be exact
+ First Name: Viktoryia
+ Last Name: Ivanova
+ Phone Country Code: United States (+1) # See linkedin for your country code, must be exact
  Mobile Phone Number: 1234567890
- Street address: 123 Fake Street
- City: Red Deer, Alberta # Include the state/province as well!
- State: YourState
- Zip: YourZip/Postal
- Linkedin: https://www.linkedin.com/in/my-linkedin-profile
- Website: https://www.my-website.com # github/website is interchangable here
+ Street address: 123 street
+ City: Las Vegas, Nevada # Include the state/province as well!
+ State: Nevada
+ Zip: 89138
+ Linkedin: https://www.linkedin.com/in/viktoryiaivanova/
+ Website: https://www.linkedin.com/in/viktoryiaivanova/ # github/website is interchangable here
 
 # ------------ Additional parameters: USA employment crap ---------------
 eeo:
@@ -164,4 +196,4 @@ eeo:
  race: None
  vetran: None
  disability: None
- citizenship: Canadian
+ citizenship: None
