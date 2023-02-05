@@ -128,42 +128,42 @@ languages:
 # How many years of TECHNOLOGY experience do you currently have? (whole numbers only)
 industry:
  # normal ones
- Accounting/Auditing: 0
- Administrative : 0
- Advertising : 0
- Analyst : 0
- Art/Creative: 0
- Business Development: 0
- Consulting: 0
- Customer Service: 0
- Distribution Design: 0
- Education: 0
+ Accounting/Auditing: 6
+ Administrative : 6
+ Advertising : 6
+ Analyst : 6
+ Art/Creative: 6
+ Business Development: 6
+ Consulting: 6
+ Customer Service: 6
+ Distribution Design: 6
+ Education: 6
  Engineering: 6
- Finance: 0
- General Business: 0
- Health Care Provider: 0
- Human Resources: 0
+ Finance: 6
+ General Business: 6
+ Health Care Provider: 6
+ Human Resources: 6
  Information Technology: 6
- Legal: 0
- Management: 0
- Manufacturing: 0
- Marketing: 0
- Public Relations: 0
- Purchasing: 0
- Product Management: 0
- Project Management: 0
- Production: 0
+ Legal: 6
+ Management: 6
+ Manufacturing: 6
+ Marketing: 6
+ Public Relations: 6
+ Purchasing: 6
+ Product Management: 6
+ Project Management: 6
+ Production: 6
  Quality Assurance: 6
- Research: 0
- Sales: 0
- Science: 0
- Strategy/Planning: 0
- Supply Chain: 0
- Training: 0
- Writing/Editing: 0
+ Research: 6
+ Sales: 6
+ Science: 6
+ Strategy/Planning: 6
+ Supply Chain: 6
+ Training: 6
+ Writing/Editing: 6
  # end normal ones
  # put your custom ones here
- #C++: 0
+ #C++: 6
  #Python: 1
  # default to put for any skill that you did not list
  default: 6
@@ -173,8 +173,8 @@ industry:
 # ------------ Additional parameters: years of technology experience ---------------
 # How many years of work experience do you have using TECHNOLOGY? (whole numbers only)
 technology:
- #python: 0
- #selenium: 0
+ #python: 6
+ #selenium: 6
  # default to put for any skill that you did not list
  default: 6
 # ------------ Additional parameters: personal info ---------------
