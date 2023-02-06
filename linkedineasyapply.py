@@ -357,6 +357,8 @@ class LinkedinEasyApply:
                         answer = 'yes'
                     elif 'are you located in the us' in radio_text:
                         answer = 'yes'
+                    elif 'are you authorized to work in the us without sponsorship for employment' in radio_text:
+                        answer = 'yes'
                     else:
                         answer = radio_options[len(radio_options) - 1]
 
@@ -437,13 +439,13 @@ class LinkedinEasyApply:
                         to_enter = self.personal_info['Website']
                     else:
                         if text_field_type == 'numeric':
-                            to_enter = 0
+                            to_enter = 6
                         else:
                             to_enter = " ‏‏‎ "
 
                     if text_field_type == 'numeric':
                         if not isinstance(to_enter, (int, float)):
-                            to_enter = 0
+                            to_enter = 6
                     elif to_enter == '':
                         to_enter = " ‏‏‎ "
 
@@ -757,3 +759,4 @@ class LinkedinEasyApply:
                          "&keywords=" + position + location + "&start=" + str(job_page*25))
 
         self.avoid_lock()
+
