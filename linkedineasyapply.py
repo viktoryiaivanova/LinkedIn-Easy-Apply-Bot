@@ -110,7 +110,7 @@ class LinkedinEasyApply:
     def apply_jobs(self, location):
         no_jobs_text = ""
         try:
-            no_jobs_element = self.browser.find_element_by_class_name('jobs-search-two-pane__no-results-banner--expand')
+            no_jobs_element = self.browser.find_element_by_class_name('jobs-search-no-results-banner')
             no_jobs_text = no_jobs_element.text
         except:
             pass
@@ -563,12 +563,34 @@ class LinkedinEasyApply:
                         choice = ""
 
                         for option in options:
-                            if answer == 'yes':
-                                # find some common words
+                            if answer in option.lower():
                                 choice = option
-                            else:
-                                if 'no' in option.lower():
-                                    choice = option
+
+                        if choice == "":
+                            choice = options[len(options) - 1]
+
+                        self.select_dropdown(dropdown_field, choice)
+                    elif 'citizenship / employment eligibility' in question_text:
+                        answer = 'permanent resident'
+
+                        choice = ""
+
+                        for option in options:
+                            if answer in option.lower():
+                                choice = option
+
+                        if choice == "":
+                            choice = options[len(options) - 1]
+
+                        self.select_dropdown(dropdown_field, choice)
+                    elif 'are you currently in the pacific or mountain standard time zone' in question_text:
+                        answer = 'yes'
+
+                        choice = ""
+
+                        for option in options:
+                            if answer in option.lower():
+                                choice = option
 
                         if choice == "":
                             choice = options[len(options) - 1]
