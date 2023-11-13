@@ -721,14 +721,13 @@ class LinkedinEasyApply:
             writer.writerow(to_write)
 
     def scroll_slow(self, scrollable_element, start=0, end=3600, step=100, reverse=False):
-        pass
-        # if reverse:
-        #     start, end = end, start
-        #     step = -step
+        if reverse:
+            start, end = end, start
+            step = -step
 
-        # for i in range(start, end, step):
-        #     self.browser.execute_script("arguments[0].scrollTo(0, {})".format(i), scrollable_element)
-        #     time.sleep(random.uniform(1.0, 2.6))
+        for i in range(start, end, step):
+            self.browser.execute_script("arguments[0].scrollTo(0, {})".format(i), scrollable_element)
+            time.sleep(random.uniform(1.0, 2.6))
 
     def avoid_lock(self):
         if self.disable_lock:
