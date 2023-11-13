@@ -126,7 +126,7 @@ class LinkedinEasyApply:
             self.scroll_slow(job_results)
             self.scroll_slow(job_results, step=300, reverse=True)
 
-            job_list = self.browser.find_elements(By.CLASS_NAME, 'jobs-search-results-list').find_elements(By.CLASS_NAME, 'jobs-search-results__list-item')
+            job_list = self.browser.find_element(By.CLASS_NAME, 'jobs-search-results-list').find_elements(By.CLASS_NAME, 'jobs-search-results__list-item')
         except:
             raise Exception("No more jobs on this page")
 
