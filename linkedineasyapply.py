@@ -130,10 +130,14 @@ class LinkedinEasyApply:
         except:
             raise Exception("No more jobs on this page")
 
+        print("Found " + str(len(job_list)) + " jobs on current page.")
         if len(job_list) == 0:
             raise Exception("No more jobs on this page")
 
+        job_tile_index = 0
         for job_tile in job_list:
+            print("Applying to job #" + str(job_tile_index) + " on the current page...")
+            job_tile = self.browser.find_element(By.CLASS_NAME, 'jobs-search-results-list').find_elements(By.CLASS_NAME, 'jobs-search-results__list-item')[job_tile_index]
             job_title, company, job_location, apply_method, link = "", "", "", "", ""
 
             try:
@@ -200,6 +204,7 @@ class LinkedinEasyApply:
             else:
                 print("Job contains blacklisted keyword or company name!")
             self.seen_jobs += link
+            job_tile_index += 1
 
     def apply_to_job(self):
         easy_apply_button = None
