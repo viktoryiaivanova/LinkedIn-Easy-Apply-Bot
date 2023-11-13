@@ -3,8 +3,6 @@ password: pwd
 
 disableAntiLock: False
 
-remote: True
-
 experienceLevel:
  internship: False
  entry: True
@@ -27,52 +25,122 @@ date:
  month: False
  week: False
  24 hours: False
+
+remote: True
  
 positions:
  - QA Engineer
- - Quality Assurance Engineer
-#  - Software Test Engineer
-#  - Test Automation Engineer
-#  - Software Engineer in Test
+ - Software Test Engineer
+ - Hardware Test Engineer
 locations:
+- Las Vegas Metropolitan Area
+- Greater Phoenix Area
+- Los Angeles Metropolitan Area
+- Salt Lake City Metropolitan Area
+- Austin, Texas Metropolitan Area
+- Dallas-Fort Worth Metroplex
+- San Antonio, Texas Metropolitan Area
+- Greater Houston
+- New York City Metropolitan Area
+- San Francisco Bay Area
+- Miami-Fort Lauderdale Area
+- Greater Tampa Bay Area
+- Greater Orlando
+- Jacksonville, Florida, United States
+- San Diego Metropolitan Area
+- Greater Seattle Area
+- Greater Chicago Area
+- Portland, Oregon Metropolitan Area
+- Greater Pittsburgh Region
+- Greater Philadelphia
+- Greater Bakersfield Area
+- Albany, New York Metropolitan Area
+- Knoxville Metropolitan Area
+- Omaha Metropolitan Area
+- Rochester, New York Metropolitan Area
+- Tulsa Metropolitan Area
+- Greater Tucson Area
+- Buffalo-Niagara Falls Area
+- Metropolitan Fresno
+- Memphis Metropolitan Area
+- Louisville Metropolitan Area
+- Raleigh-Durham-Chapel Hill Area
+- Greater Milwaukee
+- Greater Sacramento
+- Cincinnati Metropolitan Area
+- Greater Cleveland
+- Charlotte Metro
+- Greater Anchorage Area
+- Washington DC-Baltimore Area
+- Atlanta Metropolitan Area
+- Honolulu Metropolitan Area
+- Denver Metropolitan Area
+- Greater Minneapolis-St. Paul Area
+- Greater St. Louis
+- Albuquerque-Santa Fe Metropolitan Area
+- Oklahoma City Metropolitan Area
+- Kansas City Metropolitan Area
+- Greater New Orleans Region
+- Nashville Metropolitan Area
+- Greater Indianapolis
+- Columbus, Ohio Metropolitan Area
+- Detroit Metropolitan Area
+- Greater Hartford
+- Greater Boston
+- Alabama, United States
+- Alaska, United States
+- Arizona, United States
+- Arkansas, United States
+- California, United States
+- Colorado, United States
+- Connecticut, United States
+- Delaware, United States
+- Florida, United States
+- Georgia, United States
+- Hawaii, United States
+- Idaho, United States
+- Illinois, United States
+- Indiana, United States
+- Iowa, United States
+- Kansas, United States
+- Kentucky, United States
+- Louisiana, United States
+- Maine, United States
+- Maryland, United States
+- Massachusetts, United States
+- Michigan, United States
+- Minnesota, United States
+- Mississippi, United States
+- Missouri, United States
+- Montana, United States
+- Nebraska, United States
+- Nevada, United States
+- New Hampshire, United States
+- New Jersey, United States
+- New Mexico, United States
+- New York, United States
+- North Carolina, United States
+- North Dakota, United States
+- Ohio, United States
+- Oklahoma, United States
+- Oregon, United States
+- Pennsylvania, United States
+- Rhode Island, United States
+- South Carolina, United States
+- South Dakota, United States
+- Tennessee, United States
+- Texas, United States
+- Utah, United States
+- Vermont, United States
+- Virginia, United States
+- Washington, United States
+- West Virginia, United States
+- Wisconsin, United States
+- Wyoming, United States
 - United States
-# - Las Vegas Metropolitan Area
-# - Austin, Texas Metropolitan Area
-# - Dallas-Fort Worth Metroplex
-# - Greater Anchorage Area
-# - New York City Metropolitan Area
-# - San Francisco Bay Area
-# - Los Angeles Metropolitan Area
-# - Honolulu Metropolitan Area
-# - Greater Chicago Area
-# - San Diego Metropolitan Area
-# - Greater Seattle Area
-# - Denver Metropolitan Area
-# - Salt Lake City Metropolitan Area
-# - Greater Minneapolis-St. Paul Area
-# - Greater St. Louis
-# - Greater Phoenix Area
-# - Albuquerque-Santa Fe Metropolitan Area
-# - Greater Houston
-# - Oklahoma City Metropolitan Area
-# - Kansas City Metropolitan Area
-# - Greater New Orleans Region
-# - Nashville Metropolitan Area
-# - Greater Indianapolis
-# - Columbus, Ohio Metropolitan Area
-# - Detroit Metropolitan Area
-# - Greater Pittsburgh Region
-# - Greater Pittsburgh Region
-# - Miami-Fort Lauderdale Area
-# - Greater Tampa Bay Area
-# - Greater Orlando
-# - Jacksonville, Florida, United States
-# - Greater Philadelphia
-# - Greater Hartford
-# - Greater Boston
 distance: 100
 
-outputFileDirectory: ./
+outputFileDirectory: ./var/
 
 companyBlacklist:
  #- company
@@ -196,4 +264,4 @@ eeo:
  race: None
  vetran: None
  disability: None
- citizenship: None
+ citizenship: United States
