@@ -277,8 +277,8 @@ class LinkedinEasyApply:
             groups = element.find_element(By.CLASS_NAME, 'jobs-easy-apply-form-section__grouping')
             if len(groups) > 0:
                 for group in groups:
-                    lb = group.find_element_by_tag_name('label').text.lower()
-                    input_field = group.find_element_by_tag_name('input')
+                    lb = group.find_element(By.TAG_NAME, 'label').text.lower()
+                    input_field = group.find_element(By.TAG_NAME, 'input')
                     if 'street' in lb:
                         self.enter_text(input_field, self.personal_info['Street address'])
                     elif 'city' in lb:
@@ -382,7 +382,7 @@ class LinkedinEasyApply:
                 # Questions check
                 try:
                     question = el.find_element(By.CLASS_NAME, 'jobs-easy-apply-form-element')
-                    question_text = question.find_element_by_xpath('.//label').text.lower()
+                    question_text = question.find_element(By.XPATH, './/label').text.lower()
 
                     txt_field_visible = False
                     try:
@@ -467,10 +467,10 @@ class LinkedinEasyApply:
                     pass
                 # Dropdown check
                 try:
-                    question = el.find_element_by_xpath(".//*[contains(@class, 'jobs-easy-apply-form-element')]")
-                    question_text = question.find_element_by_xpath('.//label').text.lower()
+                    question = el.find_element(By.XPATH, ".//*[contains(@class, 'jobs-easy-apply-form-element')]")
+                    question_text = question.find_element(By.XPATH, './/label').text.lower()
 
-                    dropdown_field = question.find_element_by_xpath(".//select")
+                    dropdown_field = question.find_element(By.XPATH, ".//select")
 
                     select = Select(dropdown_field)
 
@@ -617,7 +617,7 @@ class LinkedinEasyApply:
                 try:
                     question = el.find_element(By.CLASS_NAME, 'jobs-easy-apply-form-element')
 
-                    clickable_checkbox = question.find_element_by_tag_name('label')
+                    clickable_checkbox = question.find_element(By.TAG_NAME, 'label')
 
                     clickable_checkbox.click()
                 except:
@@ -659,7 +659,7 @@ class LinkedinEasyApply:
 
     # Radio Select
     def radio_select(self, element, label_text, clickLast=False):
-        label = element.find_element_by_tag_name('label')
+        label = element.find_element(By.TAG_NAME, 'label')
         if label_text in label.text.lower() or clickLast == True:
             label.click()
         else:
@@ -688,11 +688,11 @@ class LinkedinEasyApply:
     def fill_up(self):
         try:
             easy_apply_content = self.browser.find_element(By.CLASS_NAME, 'jobs-easy-apply-content')
-            pb4 = easy_apply_content.find_elements(By.CLASS_NAME, 'pb4')
+            pb4 = easy_apply_content.find_elements(By.CLASS_NAME, 'jobs-easy-apply-form-element')
             if len(pb4) > 0:
                 for pb in pb4:
                     try:
-                        label = pb.find_element_by_tag_name('h3').text.lower()
+                        label = pb.find_element(By.TAG_NAME, 'h3').text.lower()
                         try:
                             self.additional_questions()
                         except:
