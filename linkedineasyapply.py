@@ -688,8 +688,7 @@ class LinkedinEasyApply:
     def fill_up(self):
         try:
             easy_apply_content = self.browser.find_element(By.CLASS_NAME, 'jobs-easy-apply-content')
-            b4 = easy_apply_content.find_element(By.CLASS_NAME, '.jobs-easy-apply-content')
-            pb4 = easy_apply_content.find_element(By.CLASS_NAME, 'pb4')
+            pb4 = easy_apply_content.find_elements(By.CLASS_NAME, 'pb4')
             if len(pb4) > 0:
                 for pb in pb4:
                     try:
