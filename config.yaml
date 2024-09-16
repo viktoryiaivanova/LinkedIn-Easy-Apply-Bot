@@ -1,21 +1,19 @@
-email: email@domain.com
-password: yourpassword
+email: fake@gmail.com
+password: pwd
 
 disableAntiLock: False
-
-remote: False
 
 experienceLevel:
  internship: False
  entry: True
- associate: False
- mid-senior level: False
- director: False
- executive: False
+ associate: True
+ mid-senior level: True
+ director: True
+ executive: True
  
 jobTypes:
  full-time: True
- contract: False
+ contract: True
  part-time: False
  temporary: False
  internship: False
@@ -27,20 +25,122 @@ date:
  month: False
  week: False
  24 hours: False
+
+remote: True
  
 positions:
- #- First position
- #- A second position
- #- A third position
- #- ...
+ - QA Engineer
+ - Software Test Engineer
+ - Hardware Test Engineer
 locations:
- #- First location
- #- A second location
- #- A third location
- #- ...
-distance: 25
+- Las Vegas Metropolitan Area
+- Greater Phoenix Area
+- Los Angeles Metropolitan Area
+- Salt Lake City Metropolitan Area
+- Austin, Texas Metropolitan Area
+- Dallas-Fort Worth Metroplex
+- San Antonio, Texas Metropolitan Area
+- Greater Houston
+- New York City Metropolitan Area
+- San Francisco Bay Area
+- Miami-Fort Lauderdale Area
+- Greater Tampa Bay Area
+- Greater Orlando
+- Jacksonville, Florida, United States
+- San Diego Metropolitan Area
+- Greater Seattle Area
+- Greater Chicago Area
+- Portland, Oregon Metropolitan Area
+- Greater Pittsburgh Region
+- Greater Philadelphia
+- Greater Bakersfield Area
+- Albany, New York Metropolitan Area
+- Knoxville Metropolitan Area
+- Omaha Metropolitan Area
+- Rochester, New York Metropolitan Area
+- Tulsa Metropolitan Area
+- Greater Tucson Area
+- Buffalo-Niagara Falls Area
+- Metropolitan Fresno
+- Memphis Metropolitan Area
+- Louisville Metropolitan Area
+- Raleigh-Durham-Chapel Hill Area
+- Greater Milwaukee
+- Greater Sacramento
+- Cincinnati Metropolitan Area
+- Greater Cleveland
+- Charlotte Metro
+- Greater Anchorage Area
+- Washington DC-Baltimore Area
+- Atlanta Metropolitan Area
+- Honolulu Metropolitan Area
+- Denver Metropolitan Area
+- Greater Minneapolis-St. Paul Area
+- Greater St. Louis
+- Albuquerque-Santa Fe Metropolitan Area
+- Oklahoma City Metropolitan Area
+- Kansas City Metropolitan Area
+- Greater New Orleans Region
+- Nashville Metropolitan Area
+- Greater Indianapolis
+- Columbus, Ohio Metropolitan Area
+- Detroit Metropolitan Area
+- Greater Hartford
+- Greater Boston
+- Alabama, United States
+- Alaska, United States
+- Arizona, United States
+- Arkansas, United States
+- California, United States
+- Colorado, United States
+- Connecticut, United States
+- Delaware, United States
+- Florida, United States
+- Georgia, United States
+- Hawaii, United States
+- Idaho, United States
+- Illinois, United States
+- Indiana, United States
+- Iowa, United States
+- Kansas, United States
+- Kentucky, United States
+- Louisiana, United States
+- Maine, United States
+- Maryland, United States
+- Massachusetts, United States
+- Michigan, United States
+- Minnesota, United States
+- Mississippi, United States
+- Missouri, United States
+- Montana, United States
+- Nebraska, United States
+- Nevada, United States
+- New Hampshire, United States
+- New Jersey, United States
+- New Mexico, United States
+- New York, United States
+- North Carolina, United States
+- North Dakota, United States
+- Ohio, United States
+- Oklahoma, United States
+- Oregon, United States
+- Pennsylvania, United States
+- Rhode Island, United States
+- South Carolina, United States
+- South Dakota, United States
+- Tennessee, United States
+- Texas, United States
+- Utah, United States
+- Vermont, United States
+- Virginia, United States
+- Washington, United States
+- West Virginia, United States
+- Wisconsin, United States
+- Wyoming, United States
+- United States
+distance: 100
 
-outputFileDirectory: C:\Users\myDirectory\
+outputFileDirectory: ./var/
 
 companyBlacklist:
  #- company
@@ -51,7 +151,7 @@ titleBlacklist:
  #- word2
 
 uploads:
- resume: C:\Users\myDirectory\Resume.pdf
+ resume: ./resume.pdf
  # Cover letter is optional
  #coverLetter: C:\Users\myDirectory\CoverLettter.pdf
 
@@ -89,74 +189,74 @@ universityGpa: 4.0
 
 # ------------ Additional parameters: languages ---------------
 languages:
- english: Native or bilingual # None, Conversational, Professional, Native or bilingual
+ english: Professional # None, Conversational, Professional, Native or bilingual
 
 
 # ------------ Additional parameters: years of INDUSTRY experience ---------------
 # How many years of TECHNOLOGY experience do you currently have? (whole numbers only)
 industry:
  # normal ones
- Accounting/Auditing: 0
- Administrative : 0
- Advertising : 0
- Analyst : 0
- Art/Creative: 0
- Business Development: 0
- Consulting: 0
- Customer Service: 0
- Distribution Design: 0
- Education: 0
- Engineering: 0
- Finance: 0
- General Business: 0
- Health Care Provider: 0
- Human Resources: 0
- Information Technology: 0
- Legal: 0
- Management: 0
- Manufacturing: 0
- Marketing: 0
- Public Relations: 0
- Purchasing: 0
- Product Management: 0
- Project Management: 0
- Production: 0
- Quality Assurance: 0
- Research: 0
- Sales: 0
- Science: 0
- Strategy/Planning: 0
- Supply Chain: 0
- Training: 0
- Writing/Editing: 0
+ Accounting/Auditing: 6
+ Administrative : 6
+ Advertising : 6
+ Analyst : 6
+ Art/Creative: 6
+ Business Development: 6
+ Consulting: 6
+ Customer Service: 6
+ Distribution Design: 6
+ Education: 6
+ Engineering: 6
+ Finance: 6
+ General Business: 6
+ Health Care Provider: 6
+ Human Resources: 6
+ Information Technology: 6
+ Legal: 6
+ Management: 6
+ Manufacturing: 6
+ Marketing: 6
+ Public Relations: 6
+ Purchasing: 6
+ Product Management: 6
+ Project Management: 6
+ Production: 6
+ Quality Assurance: 6
+ Research: 6
+ Sales: 6
+ Science: 6
+ Strategy/Planning: 6
+ Supply Chain: 6
+ Training: 6
+ Writing/Editing: 6
  # end normal ones
  # put your custom ones here
- #C++: 0
+ #C++: 6
  #Python: 1
  # default to put for any skill that you did not list
- default: 0
+ default: 6
  # end custom ones
 
 
 # ------------ Additional parameters: years of technology experience ---------------
 # How many years of work experience do you have using TECHNOLOGY? (whole numbers only)
 technology:
- #python: 0
- #selenium: 0
+ #python: 6
+ #selenium: 6
  # default to put for any skill that you did not list
- default: 0
+ default: 6
 # ------------ Additional parameters: personal info ---------------
 personalInfo:
- First Name: FirstName
- Last Name: LastName
- Phone Country Code: Canada (+1) # See linkedin for your country code, must be exact
+ First Name: Viktoryia
+ Last Name: Ivanova
+ Phone Country Code: United States (+1) # See linkedin for your country code, must be exact
  Mobile Phone Number: 1234567890
- Street address: 123 Fake Street
- City: Red Deer, Alberta # Include the state/province as well!
- State: YourState
- Zip: YourZip/Postal
- Linkedin: https://www.linkedin.com/in/my-linkedin-profile
- Website: https://www.my-website.com # github/website is interchangable here
+ Street address: 123 street
+ City: Las Vegas, Nevada # Include the state/province as well!
+ State: Nevada
+ Zip: 89138
+ Linkedin: https://www.linkedin.com/in/viktoryiaivanova/
+ Website: https://www.linkedin.com/in/viktoryiaivanova/ # github/website is interchangable here
 
 # ------------ Additional parameters: USA employment crap ---------------
 eeo:
@@ -164,4 +264,4 @@ eeo:
  race: None
  vetran: None
  disability: None
- citizenship: Canadian
+ citizenship: United States

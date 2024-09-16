@@ -1,19 +1,15 @@
 import yaml, pdb
 from selenium import webdriver
-from selenium.webdriver.chrome.options import Options
 from webdriver_manager.chrome import ChromeDriverManager
+from selenium.webdriver.chrome.service import Service as ChromeService 
 from linkedineasyapply import LinkedinEasyApply
 from validate_email import validate_email
 
 def init_browser():
-    browser_options = Options()
     options = ['--disable-blink-features', '--no-sandbox', '--start-maximized', '--disable-extensions',
                '--ignore-certificate-errors', '--disable-blink-features=AutomationControlled']
 
-    for option in options:
-        browser_options.add_argument(option)
-
-    driver = webdriver.Chrome(ChromeDriverManager().install(), chrome_options=browser_options)
+    driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install(), service_args=options))
 
     driver.set_window_position(0, 0)
     driver.maximize_window()
@@ -126,7 +122,3 @@ if __name__ == '__main__':
     bot.login()
     bot.security_check()
     bot.start_applying()
-
-
-
-
